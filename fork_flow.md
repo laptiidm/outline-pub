@@ -122,6 +122,5 @@ git push origin feature/your-feature-name
 - Використовуй зрозумілі назви гілок: `fix/button-bug`, `feature/chat-screen`, тощо.
 ```
 
----
 
 
