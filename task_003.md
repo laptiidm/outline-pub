@@ -2,40 +2,30 @@
 
 **Опис:**
 
-Метою цього таску є реорганізація поточної базової структури проєкту Flutter у відповідності до архітектурного патерну Model-View-ViewModel (MVVM), як це було запропоновано раніше. Це необхідно для покращення організації коду, полегшення його підтримки, підвищення тестопридатності та забезпечення кращої масштабованості застосунку.
+Метою цього таску є реорганізація поточної базової структури проєкту Flutter у відповідності до архітектурного патерну Model-View-ViewModel (MVVM), а якщо точніше, то орієнтуємося на **feature-first MVVM**. Це необхідно для покращення організації коду, полегшення його підтримки, підвищення тестопридатності та забезпечення кращої масштабованості застосунку.
 **Структура проекту:**
 ```
-antistress_app/
-├── android/
-├── ios/
-├── lib/
-│   ├── core/
-│   │   ├── constants/
-│   │   ├── enums/
-│   │   └── utils/
-│   ├── data/
-│   │   ├── models/
-│   │   │   └── animal.dart       # Модель для представлення тваринки
-│   │   └── repositories/
-│   │       └── animal_repository.dart # Інтерфейс та реалізація для отримання даних про тварин
-│   ├── presentation/
-│   │   ├── screens/
-│   │   │   ├── animal_selection_screen.dart
-│   │   │   ├── interaction_screen.dart
-│   │   │   ├── pre_interaction_screen.dart # Екран перед основною взаємодією
-│   │   │   └── splash_screen.dart
-│   │   ├── view_models/
-│   │   │   ├── animal_selection_view_model.dart
-│   │   │   └── interaction_view_model.dart
-│   │   └── widgets/
-│   │       └── animal_card.dart   # Віджет для відображення тваринки у списку
-│   ├── routing/
-│   │   └── app_router.dart
-│   ├── services/
-│   │   └── audio_vibration_service.dart # Сервіс для відтворення звуку та вібрації
-│   └── main.dart
-├── test/
-└── pubspec.yaml
+lib/
+├── core/
+│   ├── constants/
+│   ├── styles/
+│   └── utils/
+
+├── features/
+│   ├── onboarding/
+│   │   ├── model/
+│   │   ├── view/
+│   │   ├── view_model/
+│   │   └── services/
+│   ├── animal_selection/
+│   │   ├── model/
+│   │   ├── view/
+│   │   ├── view_model/
+│   │   └── services/
+│   └── ... (інші фічі)
+
+├── routes.dart
+└── main.dart
 ```
 
 **Критерії виконання:**
