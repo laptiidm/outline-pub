@@ -23,12 +23,11 @@
 
 1. **Додати залежність**
    У `pubspec.yaml` додати бібліотеку:
-   ```yaml
-   dependencies:
-     go_router: ^13.0.0
+   ```
+    flutter pub add go_route
    ```
 
-2. **Створити файл конфігурації роутера**
+3. **Створити файл конфігурації роутера**
    ```
    lib/core/routing/app_router.dart
    ```
@@ -38,13 +37,13 @@
    - `/instruction` → InstructionScreen
    - `/interaction` → InteractionScreen
 
-3. **Підключити GoRouter у `main.dart`**
+4. **Підключити GoRouter у `main.dart`**
    Замінити `MaterialApp` на `MaterialApp.router`, передати `routerConfig`.
 
-4. **Переписати переходи між екранами**
+5. **Переписати переходи між екранами**
    Усі переходи реалізовувати через `context.go(...)` або `context.goNamed(...)`.
 
-5. **(Опціонально)** Створити enum або утиліти для назв маршрутів:
+6. **(Опціонально)** Створити enum або утиліти для назв маршрутів:
    ```
    lib/core/routing/router_utils.dart
    ```
