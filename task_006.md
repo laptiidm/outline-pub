@@ -24,7 +24,7 @@
 1. **Додати залежність**
    У `pubspec.yaml` додати бібліотеку:
    ```
-    flutter pub add go_route
+    flutter pub add go_router
    ```
 
 3. **Створити файл конфігурації роутера**
